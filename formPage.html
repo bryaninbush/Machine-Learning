@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<!-- <html lang="en"> -->
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        <div>
+                <h1>考研機率預測</h1>
+                <form action="/submit" method="post" enctype="multipart/form-data">
+                    <label for="GRE_Score">GRE Score (260~340的整數)</label>
+                    <input type="text" id="GRE_Score" name="GRE_Score" value="{{GRE_Score}}">
+                    <br><br>
+
+                    <label for="TOEFL_Score">TOEFL Score (0~120的整數)</label>
+                    <input type="text" id="TOEFL_Score" name="TOEFL_Score" value="{{TOEFL_Score}}">
+                    <br><br>
+
+                    <label for="University_Rating">University Rating</label>
+                    <select name="University_Rating" id="University_Rating">
+                        <option value="1" {{University_Rating_1}}>1</option>
+                        <option value="2" {{University_Rating_2}}>2</option>
+                        <option value="3" {{University_Rating_3}}>3</option>
+                        <option value="4" {{University_Rating_4}}>4</option>
+                        <option value="5" {{University_Rating_5}}>5</option>
+                    </select>
+                    <br><br>      
+
+                    <label for="SOP">SOP (1~5的小數)</label>
+                    <select name="SOP" id="SOP">
+                        <option value="1" {{SOP_1}}>1</option>
+                        <option value="1.5" {{SOP_15}}>1.5</option>
+                        <option value="2" {{SOP_2}}>2</option>
+                        <option value="2.5" {{SOP_25}}>2.5</option>
+                        <option value="3" {{SOP_3}}>3</option>
+                        <option value="3.5" {{SOP_35}}>3.5</option>
+                        <option value="4" {{SOP_4}}>4</option>
+                        <option value="4.5" {{SOP_45}}>4.5</option>
+                        <option value="5" {{SOP_5}}>5</option>
+                    </select>
+                    <br><br>
+
+                    <label for="LOR">LOR (1~5的小數)</label>
+                    <select name="LOR" id="LOR">
+                        <option value="1" {{LOR_1}}>1</option>
+                        <option value="1.5" {{LOR_15}}>1.5</option>
+                        <option value="2" {{LOR_2}}>2</option>
+                        <option value="2.5" {{LOR_25}}>2.5</option>
+                        <option value="3" {{LOR_3}}>3</option>
+                        <option value="3.5" {{LOR_35}}>3.5</option>
+                        <option value="4" {{LOR_4}}>4</option>
+                        <option value="4.5" {{LOR_45}}>4.5</option>
+                        <option value="5" {{LOR_5}}>5</option>
+                    </select>
+                    <br><br>
+                    
+                    <label for="CGPA">CGPA (1~10的小數)</label>
+                    <input type="text" id="CGPA" name="CGPA" value="{{CGPA}}">
+                    <br><br>
+                    <input type="submit" value="submit">
+                </form>
+            <br>
+        </div>
+
+        <div>
+            <p>{{result_str}} {{prediction}}</p> 
+            <p>{{ad_str}}</p>
+            <p><a href = "https://masongre.blogspot.com/p/mason-gre-gre-mason-20-gre-gre-75-toeic.html">{{adG_url}}</a></p>
+            <p><a href = "http://sk2toefl.blogspot.com/p/blog-page_94.html">{{adT_url}}</a></p>
+            <img {{graph}} {{height}}>
+        </div>
+            
+    </body>
+</html>
+
+
+
